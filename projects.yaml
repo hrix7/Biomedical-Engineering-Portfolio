@@ -1,0 +1,13 @@
+projects:
+  - name: 3D Pressure Sore Tissue Model
+    url: https://github.com/hrix7/3D-Pressure-Sore-Tissue-Model
+    themes: [biomechanics, FEA, additive-manufacturing]
+  - name: Medical Imaging Deep Learning
+    url: https://github.com/hrix7/Medical-Imaging-Deep-Learning
+    themes: [medical-imaging, deep-learning, HPC]
+  - name: Wearable Gait and Fall-Risk System
+    url: https://github.com/hrix7/Wearable-Gait-Fall-Risk-System
+    themes: [wearables, signal-processing]
+  - name: Patient-Specific Medical Design
+    url: https://github.com/hrix7/Patient-Specific-Medical-Design
+    themes: [DICOM, CAD, additive-manufacturing]
