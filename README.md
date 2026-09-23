@@ -43,7 +43,10 @@ Python, MATLAB, PyTorch, NumPy, pandas, OpenCV, Matplotlib, 3D Slicer, ImageJ, U
 
 ## Author
 
-Hritika Adhikary - Tempe, Arizona.
+**Hritika Adhikary**  
+Biomedical Engineer, Tempe, Arizona  
+M.S. Biomedical Engineering - Arizona State University  
+B.Tech. Biomedical Engineering - Adamas University
 
 ## Rights
 
