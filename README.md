@@ -1,28 +1,50 @@
-# Biomedical Engineering Portfolio
+# Hritika Adhikary - Biomedical Engineering Portfolio
 
-A curated navigation hub for Hritika Adhikary's public biomedical engineering projects across medical imaging, AI, computational modeling, wearables, medical-device design, additive manufacturing, and automation.
+I am a biomedical engineer working across medical imaging, patient-specific design, computational modeling, wearable sensing, medical-device regulation, and AI-enabled research workflows. I earned my M.S. in Biomedical Engineering from Arizona State University with a 3.65/4.00 GPA and my B.Tech. in Biomedical Engineering from Adamas University with an 8.88/10 CGPA.
 
-## Featured repositories
+## Featured technical projects
 
-- [3D Pressure Sore Tissue Model](https://github.com/hrix7/3D-Pressure-Sore-Tissue-Model)
-- [Medical Imaging Deep Learning](https://github.com/hrix7/Medical-Imaging-Deep-Learning)
-- [Wearable Gait and Fall-Risk System](https://github.com/hrix7/Wearable-Gait-Fall-Risk-System)
-- [Patient-Specific Medical Design](https://github.com/hrix7/Patient-Specific-Medical-Design)
-- [Biomedical Signal Processing](https://github.com/hrix7/Biomedical-Signal-Processing)
-- [Medical Device Regulatory Analysis](https://github.com/hrix7/Medical-Device-Regulatory-Analysis)
-- [IoT Composter and Hydroponics System](https://github.com/hrix7/IoT-Composter-Hydroponics-System)
-- [Computer Graphics and 3D Visualization](https://github.com/hrix7/Computer-Graphics-and-3D-Visualization)
-- [AI Agent Automation Lab](https://github.com/hrix7/AI-Agent-Automation-Lab)
-- [Conference Publications](https://github.com/hrix7/Conference-Publications)
+- **3D Pressure Sore Tissue Model** - I designed a multilayer skin phantom, completed 15 FEA cases across three geometries and five loading levels, and developed an embedded-sensor channel concept.
+- **Deep Learning for Medical Image Analysis** - I built chest X-ray classification, segmentation, and localization pipelines, including 95% classification accuracy, approximately 0.89 lung-segmentation Dice, UPerNet, and Faster R-CNN work.
+- **Wearable Gait and Fall-Risk System** - I designed a multimodal IMU, FSR, and PPG system with gait, sway, symmetry, heart-rate, and dashboard components.
+- **Ergonomic Assessment of South Asian Tea Leaf Pickers** - I used RULA, REBA, and the NIOSH lifting equation to identify musculoskeletal risk factors and propose interventions.
+- **IoT Composter and Hydroponics System** - I contributed to a 10-member sensor, 3D-printing, and IoT team project.
+- **Computer Graphics and Imaging** - I completed Stanford's Summer Session and created a final rendered scene.
 
-## Technical themes
+The repository links are maintained in [projects.yaml](projects.yaml).
 
-Medical imaging and AI · biomechanics and physiological modeling · biomedical devices and wearables · 3D medical design and additive manufacturing · clinical and regulatory engineering · AI-enabled workflows.
+## Professional work
 
-## Repository policy
+### Operations Engineer - Steroviz Pixels Pvt. Ltd. | Dec 2022-May 2024
 
-Public work must exclude protected health information, employer/client confidential material, restricted datasets, unpublished manuscript content, and third-party assets without redistribution rights.
+I led more than 10 CT/MRI-based 3D anatomical reconstruction cases, designed patient-specific CMF and orthopedic implants, optimized STL meshes, worked with surgeons, and prepared designs for additive manufacturing.
 
-## License
+### Biomedical Researcher - Purcell BioPro | Jun-Aug 2025
 
-MIT applies only to original repository-authored code and text.
+I researched and improved a patient-facing inhaler application interface in Figma, with emphasis on intuitive guidance and reliable device connectivity through the user workflow.
+
+### Instructional Aide - ASU Biomaterials | Jan-May 2026
+
+I supported graduate-level instruction, grading, Canvas administration, and student questions for BME 598 Biomaterials.
+
+### Biomedical Intern - Ruby General Hospital | Aug-Sep 2022
+
+I performed maintenance, troubleshooting, and repair support for devices in the operating theater, ICU, cath lab, emergency department, and other clinical areas.
+
+## Code in this repository
+
+- `scripts/validate_catalog.py` checks the project catalog for required fields and valid repository links.
+- `scripts/ergonomic_risk_summary.py` summarizes RULA, REBA, and NIOSH lifting-index results from a CSV file.
+- `docs/CONTENT_CHECKLIST.md` is the review checklist I use before publishing portfolio material.
+
+## Technical toolkit
+
+Python, MATLAB, PyTorch, NumPy, pandas, OpenCV, Matplotlib, 3D Slicer, ImageJ, U-Net, ResNet, UPerNet, Faster R-CNN, Vision Transformers, SolidWorks, Fusion 360, PTC Creo, Meshmixer, Blender, PreForm, SLA 3D printing, Figma, FDA 510(k)/PMA, SaMD, EU IVDR, and FMEA.
+
+## Author
+
+Hritika Adhikary - Tempe, Arizona.
+
+## Rights
+
+Copyright (c) 2026 Hritika Adhikary. All rights reserved. See [LICENSE](LICENSE).
