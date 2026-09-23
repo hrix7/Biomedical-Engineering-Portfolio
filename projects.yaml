@@ -7,7 +7,28 @@ projects:
     themes: [medical-imaging, deep-learning, HPC]
   - name: Wearable Gait and Fall-Risk System
     url: https://github.com/hrix7/Wearable-Gait-Fall-Risk-System
-    themes: [wearables, signal-processing]
+    themes: [wearables, signal-processing, sensors]
   - name: Patient-Specific Medical Design
     url: https://github.com/hrix7/Patient-Specific-Medical-Design
     themes: [DICOM, CAD, additive-manufacturing]
+  - name: Biomedical Signal Processing
+    url: https://github.com/hrix7/Biomedical-Signal-Processing
+    themes: [PPG, sleep, physiological-signals]
+  - name: Medical Device Regulatory Analysis
+    url: https://github.com/hrix7/Medical-Device-Regulatory-Analysis
+    themes: [FDA, risk-management, medical-devices]
+  - name: IoT Composter and Hydroponics System
+    url: https://github.com/hrix7/IoT-Composter-Hydroponics-System
+    themes: [IoT, sensors, sustainability]
+  - name: Computer Graphics and 3D Visualization
+    url: https://github.com/hrix7/Computer-Graphics-and-3D-Visualization
+    themes: [graphics, rendering, visualization]
+  - name: AI Agent and Automation Lab
+    url: https://github.com/hrix7/AI-Agent-Automation-Lab
+    themes: [AI-agents, MCP, automation]
+  - name: Biomedical Engineering Portfolio
+    url: https://github.com/hrix7/Biomedical-Engineering-Portfolio
+    themes: [portfolio, ergonomics, experience]
+  - name: Conference Publications
+    url: https://github.com/hrix7/Conference-Publications
+    themes: [publications, metadata, research]
