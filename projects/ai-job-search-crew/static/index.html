@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hritika · Job Search Crew</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brandmark">h.</span><div>Hritika’s workspace<small>JOB SEARCH CREW</small></div></div>
+    <div class="nav-label">YOUR NEXT CHAPTER</div>
+    <nav aria-label="Main navigation">
+      <button data-nav="workspace" class="nav active"><span>▦</span> Applications</button>
+      <button data-nav="profile" class="nav"><span>◇</span> Your evidence</button>
+      <button data-nav="setup" class="nav"><span>⚙</span> Local AI & setup</button>
+    </nav>
+    <div class="sidebar-note"><span class="dot"></span> Made for your search<p>Medical devices, imaging,<br>research, and what comes next.</p></div>
+    <div class="person"><div class="avatar">HA</div><div>Hritika Adhikary<small>Biomedical engineer</small></div></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>CAREER WORKSPACE <span class="divider">/</span> <span id="crumb">Applications</span></span><span class="local-pill"><span class="dot"></span> Local · $0 API spend</span></header>
+    <nav class="mobile-nav" aria-label="Mobile navigation"><button data-nav="workspace">Applications</button><button data-nav="profile">Your evidence</button><button data-nav="setup">Local AI</button></nav>
+    <div id="content" aria-live="polite"><p class="loading">Opening your workspace…</p></div>
+  </main>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="new-job">
+    <form id="job-form">
+      <div class="section-heading"><div><span class="eyebrow">ADD AN OPPORTUNITY</span><h2>Where could you go next?</h2></div><button type="button" class="icon-button" data-action="close-modal" aria-label="Close">×</button></div>
+      <div class="two-col"><label>Company<input name="company" required maxlength="200" placeholder="Company name"></label><label>Role<input name="title" required maxlength="300" placeholder="Exact job title"></label></div>
+      <div class="two-col"><label>Location<input name="location" maxlength="300" placeholder="City, state or remote"></label><label>Direction<select name="mode" id="mode-options"></select></label></div>
+      <label>Job posting link <span class="optional">optional</span><input name="posting_url" type="url" placeholder="https://…"></label>
+      <label>Full job description<textarea name="description" rows="7" required maxlength="30000" placeholder="Paste the full posting here. It stays on your computer."></textarea></label>
+      <label>Requirements to compare <span class="optional">optional · one per line</span><textarea name="requirements" rows="4" maxlength="18000" placeholder="Paste the specific requirements you want compared. If blank, the app extracts lines from the full posting."></textarea></label>
+      <p class="muted">The app compares the wording you provide. Always check that the extracted requirements cover the posting.</p>
+      <div class="form-footer"><button class="button secondary" type="button" data-action="close-modal">Cancel</button><button class="button" type="submit">Save opportunity →</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

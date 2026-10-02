@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+data/private/
+*.sqlite3*
+# This personalized seed contains contact information and CV details.
+data/seed.json

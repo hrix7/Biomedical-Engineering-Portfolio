@@ -1,0 +1,127 @@
+Build validation performed by the assistant on Ubuntu 24.04; no MSP432 hardware execution.
+
+$ gcc --version
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+$ arm-none-eabi-gcc --version
+arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+$ make clean
+rm -f *.o *.d *.dep *.i *.asm *.map *.out .platform-HOST .platform-MSP432
+
+$ make -j4 compile-all PLATFORM=HOST
+rm -f .platform-HOST .platform-MSP432
+touch .platform-HOST
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF main.d -MT "main.o main.i main.asm" -c main.c -o main.o
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -c memory.c -o memory.o
+
+$ make build PLATFORM=HOST
+gcc -Wall -Werror -g -O0 -std=c99 main.o memory.o -Wl,-Map=c1m2.map -o c1m2.out
+size c1m2.out
+   text	   data	    bss	    dec	    hex	filename
+   2137	    600	     24	   2761	    ac9	c1m2.out
+
+$ make main.i main.asm memory.i memory.asm c1m2.asm PLATFORM=HOST
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF main.d -MT "main.o main.i main.asm" -E main.c -o main.i
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF main.d -MT "main.o main.i main.asm" -S main.c -o main.asm
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -E memory.c -o memory.i
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -S memory.c -o memory.asm
+objdump -d c1m2.out > c1m2.asm
+
+HOST output (exact bytes): b'aXy72_\x00L+R\n'
+
+$ make -n build PLATFORM=HOST
+size c1m2.out
+
+$ make clean
+rm -f *.o *.d *.dep *.i *.asm *.map *.out .platform-HOST .platform-MSP432
+
+$ make -j4 compile-all PLATFORM=MSP432
+rm -f .platform-HOST .platform-MSP432
+touch .platform-MSP432
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF main.d -MT "main.o main.i main.asm" -c main.c -o main.o
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -c memory.c -o memory.o
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF interrupts_msp432p401r_gcc.d -MT "interrupts_msp432p401r_gcc.o interrupts_msp432p401r_gcc.i interrupts_msp432p401r_gcc.asm" -c interrupts_msp432p401r_gcc.c -o interrupts_msp432p401r_gcc.o
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF startup_msp432p401r_gcc.d -MT "startup_msp432p401r_gcc.o startup_msp432p401r_gcc.i startup_msp432p401r_gcc.asm" -c startup_msp432p401r_gcc.c -o startup_msp432p401r_gcc.o
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF system_msp432p401r.d -MT "system_msp432p401r.o system_msp432p401r.i system_msp432p401r.asm" -c system_msp432p401r.c -o system_msp432p401r.o
+
+$ make build PLATFORM=MSP432
+arm-none-eabi-gcc -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs main.o memory.o interrupts_msp432p401r_gcc.o startup_msp432p401r_gcc.o system_msp432p401r.o -Wl,-Map=c1m2.map -T ../msp432p401r.lds -o c1m2.out
+arm-none-eabi-size c1m2.out
+   text	   data	    bss	    dec	    hex	filename
+   2778	   1084	     76	   3938	    f62	c1m2.out
+
+$ make main.i main.asm memory.i memory.asm interrupts_msp432p401r_gcc.i interrupts_msp432p401r_gcc.asm startup_msp432p401r_gcc.i startup_msp432p401r_gcc.asm system_msp432p401r.i system_msp432p401r.asm c1m2.asm PLATFORM=MSP432
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF main.d -MT "main.o main.i main.asm" -E main.c -o main.i
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF main.d -MT "main.o main.i main.asm" -S main.c -o main.asm
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -E memory.c -o memory.i
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -S memory.c -o memory.asm
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF interrupts_msp432p401r_gcc.d -MT "interrupts_msp432p401r_gcc.o interrupts_msp432p401r_gcc.i interrupts_msp432p401r_gcc.asm" -E interrupts_msp432p401r_gcc.c -o interrupts_msp432p401r_gcc.i
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF interrupts_msp432p401r_gcc.d -MT "interrupts_msp432p401r_gcc.o interrupts_msp432p401r_gcc.i interrupts_msp432p401r_gcc.asm" -S interrupts_msp432p401r_gcc.c -o interrupts_msp432p401r_gcc.asm
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF startup_msp432p401r_gcc.d -MT "startup_msp432p401r_gcc.o startup_msp432p401r_gcc.i startup_msp432p401r_gcc.asm" -E startup_msp432p401r_gcc.c -o startup_msp432p401r_gcc.i
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF startup_msp432p401r_gcc.d -MT "startup_msp432p401r_gcc.o startup_msp432p401r_gcc.i startup_msp432p401r_gcc.asm" -S startup_msp432p401r_gcc.c -o startup_msp432p401r_gcc.asm
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF system_msp432p401r.d -MT "system_msp432p401r.o system_msp432p401r.i system_msp432p401r.asm" -E system_msp432p401r.c -o system_msp432p401r.i
+arm-none-eabi-gcc -I../include/common -I../include/msp432 -I../include/CMSIS -DMSP432 -Wall -Werror -g -O0 -std=c99 -mcpu=cortex-m4 -mthumb -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs -MMD -MP -MF system_msp432p401r.d -MT "system_msp432p401r.o system_msp432p401r.i system_msp432p401r.asm" -S system_msp432p401r.c -o system_msp432p401r.asm
+arm-none-eabi-objdump -d c1m2.out > c1m2.asm
+
+$ arm-none-eabi-readelf -h c1m2.out
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x140
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          150292 (bytes into file)
+  Flags:                             0x5000400, Version5 EABI, hard-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         4
+  Size of section headers:           40 (bytes)
+  Number of section headers:         24
+  Section header string table index: 23
+
+$ make -n build PLATFORM=MSP432
+arm-none-eabi-size c1m2.out
+
+$ make build PLATFORM=HOST
+rm -f .platform-HOST .platform-MSP432
+touch .platform-HOST
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF main.d -MT "main.o main.i main.asm" -c main.c -o main.o
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -c memory.c -o memory.o
+gcc -Wall -Werror -g -O0 -std=c99 main.o memory.o -Wl,-Map=c1m2.map -o c1m2.out
+size c1m2.out
+   text	   data	    bss	    dec	    hex	filename
+   2137	    600	     24	   2761	    ac9	c1m2.out
+
+$ make build PLATFORM=HOST
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF main.d -MT "main.o main.i main.asm" -c main.c -o main.o
+gcc -I../include/common -DHOST -Wall -Werror -g -O0 -std=c99 -MMD -MP -MF memory.d -MT "memory.o memory.i memory.asm" -c memory.c -o memory.o
+gcc -Wall -Werror -g -O0 -std=c99 main.o memory.o -Wl,-Map=c1m2.map -o c1m2.out
+size c1m2.out
+   text	   data	    bss	    dec	    hex	filename
+   2137	    600	     24	   2761	    ac9	c1m2.out
+
+$ make clean
+rm -f *.o *.d *.dep *.i *.asm *.map *.out .platform-HOST .platform-MSP432
+
+$ make build
+Makefile:22: *** Specify PLATFORM=HOST or PLATFORM=MSP432.  Stop.
+
+$ make build PLATFORM=INVALID
+Makefile:22: *** Specify PLATFORM=HOST or PLATFORM=MSP432.  Stop.
+
+All checks passed. Generated build files cleaned before packaging.

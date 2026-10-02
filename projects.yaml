@@ -32,3 +32,12 @@ projects:
   - name: Conference Publications
     url: https://github.com/hrix7/Conference-Publications
     themes: [publications, metadata, research]
+  - name: AI Job Search Crew
+    url: https://github.com/hrix7/Biomedical-Engineering-Portfolio/tree/main/projects/ai-job-search-crew
+    themes: [ai-job-search-crew]
+  - name: Embedded C Build System
+    url: https://github.com/hrix7/Biomedical-Engineering-Portfolio/tree/main/projects/embedded-c-build-system
+    themes: [embedded-c-build-system]
+  - name: Application Desk
+    url: https://github.com/hrix7/Biomedical-Engineering-Portfolio/tree/main/projects/application-desk
+    themes: [application-desk]

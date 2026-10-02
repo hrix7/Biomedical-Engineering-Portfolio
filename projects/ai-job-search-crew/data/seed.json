@@ -1,0 +1,224 @@
+{
+  "schema_version": "0.2.0",
+  "stage": "Personalized data foundation for the runnable local v1 application",
+  "prepared_on": "2026-09-28",
+  "source_policy": {
+    "candidate_source": "Fictional public demo profile",
+    "job_source": "Historical user-supplied job posting",
+    "verification": "All candidate details are synthetic examples. Human review required.",
+    "writing_rules": [
+      "Do not turn planned work into completed achievements.",
+      "Human review required before submission."
+    ]
+  },
+  "candidate": {
+    "name": "Example Candidate",
+    "location": "Example City",
+    "contact": {
+      "email": "candidate@example.com",
+      "phone": ""
+    },
+    "education": [
+      {
+        "id": "EDU1",
+        "institution": "Example University",
+        "degree": "MS Biomedical Engineering",
+        "start": "2024-08",
+        "end": "2026-05",
+        "gpa": "Example only"
+      },
+      {
+        "id": "EDU3",
+        "institution": "Example College",
+        "degree": "BS Engineering",
+        "start": "2020-08",
+        "end": "2024-05"
+      }
+    ],
+    "experience": [
+      {
+        "id": "EXP1",
+        "role": "Teaching assistant",
+        "organization": "Example University",
+        "facts": [
+          "Supported course administration"
+        ],
+        "start": "2024-01",
+        "end": "2024-06"
+      },
+      {
+        "id": "EXP3",
+        "role": "Design assistant",
+        "organization": "Example Company",
+        "facts": [
+          "Prepared CAD models for review"
+        ],
+        "start": "2024-01",
+        "end": "2024-06"
+      },
+      {
+        "id": "EXP4",
+        "role": "Equipment intern",
+        "organization": "Example Hospital",
+        "facts": [
+          "Observed device maintenance"
+        ],
+        "start": "2024-01",
+        "end": "2024-06"
+      }
+    ],
+    "projects": [
+      {
+        "id": "PROJ1",
+        "title": "Example tissue model",
+        "completion_status": "Sensor integration and physical testing not completed",
+        "excluded_from_drafts": true,
+        "user_correction": {
+          "sensor_integration_completed": false,
+          "physical_testing_completed": false
+        },
+        "facts": [
+          "Planned a tissue-model study"
+        ],
+        "period": "Demo"
+      },
+      {
+        "id": "PROJ2",
+        "title": "Example wearable concept",
+        "facts": [
+          "Designed a conceptual wearable dashboard"
+        ],
+        "period": "Demo"
+      }
+    ],
+    "skills": {
+      "id": "SKILLS1",
+      "cad_and_design": [
+        "SolidWorks"
+      ],
+      "programming_and_data": [
+        "Python"
+      ],
+      "medical_imaging_and_ai": [],
+      "medical_devices_and_regulatory": []
+    },
+    "preferences": {
+      "relocation": null,
+      "work_arrangement": null,
+      "available_hours_per_week": null,
+      "employment_types": null,
+      "work_authorization_wording": null,
+      "api_budget_monthly_usd": 0,
+      "paid_apis_allowed": false,
+      "availability_scope": "Demo only; no real availability claim"
+    }
+  },
+  "job": {
+    "id": "arthrex-67794",
+    "company": "Arthrex, Inc.",
+    "requisition": "67794",
+    "title": "Engineering Co-op - Product Development - Knee & Hip",
+    "team": "Knee & Hip Arthroscopy Engineering",
+    "location": "Naples, FL, US, 34108",
+    "arrangement": "On-site",
+    "period_start": "2027-01",
+    "period_end": "2027-06",
+    "ideal_hours_per_week": 40,
+    "posting_url": null,
+    "requirements": [
+      {
+        "id": "REQ1",
+        "type": "eligibility",
+        "text": "Full-time student pursuing a bachelor's degree in mechanical or biomedical engineering, junior or above, or a recent graduate within six months of graduation",
+        "ambiguities": [
+          "Whether the six-month window is measured at application or co-op start",
+          "Whether a recent master's graduate qualifies under the listed degree criteria"
+        ]
+      },
+      {
+        "id": "REQ2",
+        "type": "required_skill",
+        "text": "Experience with CAD (SolidWorks) required"
+      },
+      {
+        "id": "REQ3",
+        "type": "knowledge",
+        "text": "Knowledge of surgical equipment/instrumentation and mechanical testing equipment"
+      },
+      {
+        "id": "REQ4",
+        "type": "skill",
+        "text": "Effective oral and written communication and ability to work through technical issues"
+      },
+      {
+        "id": "REQ5",
+        "type": "preferred_skill",
+        "text": "Familiarity with Microsoft Office Suite preferred"
+      },
+      {
+        "id": "REQ6",
+        "type": "availability",
+        "text": "January–June 2027; ideal availability is 40 hours per week at the Naples facility"
+      }
+    ],
+    "duties": [
+      "Attend verification testing and observe adherence to test protocols",
+      "Attend validation labs",
+      "Create SolidWorks drawings and prototypes/models",
+      "Collaborate across teams on product development, extensions and enhancements",
+      "Attend required training and meetings"
+    ],
+    "sponsorship_or_authorization_policy": "Not stated in supplied posting",
+    "description": "Engineering Co-op - Product Development - Knee & Hip\nArthrex, Inc. | Requisition 67794\nNaples, FL, US, 34108\nSource: posting text supplied by the user on September 28, 2026. Live availability not verified.\n\nArthrex, Inc. is a global medical device company and a leader in new product development and medical education in orthopedics. Arthrex is actively searching for a student pursuing a Biomedical or Mechanical Engineering degree to support the Knee & Hip Arthroscopy Engineering team in Naples, FL. The Knee & Hip Arthroscopy Engineering team is responsible for supporting all product development activities, as well as the maintenance of the products within the portfolio. A successful candidate will assist the engineering team with SolidWorks modeling and drawings (creating new and editing current), draft documentation as needed, attend verification testing and validation labs, and various other engineering activities with guidance from the engineering staff. The individual should have a firm understanding of SolidWorks and will be detail oriented in the execution and documentation that is requested. Join our talented team at a global medical device company focused on Helping Surgeons Treat Their Patients Better™.\n\nThis co-op will run from January 2027 – June 2027. The ideal candidate will have the availability to work 40 hours per week at our Naples, FL facility.\n\nMain Objective:\nTo work with the Knee & Hip Arthroscopy Engineering department to gain experience in research, design, testing, and development of medical devices.\n\nEssential Duties and Responsibilities:\n- Support the engineering team by attending verification testing, ensuring test protocols were followed and attend validation labs to gain a better understanding of anatomy and Arthrex products.\n- Attend training sessions, symposiums, departmental meetings etc. as required.\n- Utilize SolidWorks for drawing creation and prototyping/modeling.\n- Effectively works with peers, project team members, and other departments in new product development, product line extensions, and product enhancements.\n- Other duties as assigned.\n\nEducation and Experience:\n- Enrolled as a full-time student pursuing a bachelor's degree in mechanical or biomedical engineering, or a recent graduate. Junior or above required. (Recent graduates must be within six months of their graduation date to qualify.)\n\nKnowledge and Skill Requirements/Specialized Courses and/or Training:\nAbility to effectively communicate, orally and in writing and possess the ability to work through technical issues.\n\nMachine, Tools, and/or Equipment Skills:\n- Knowledge of surgical equipment/instrumentation, and mechanical testing equipment.\n- PC; Familiarity with Microsoft Office Suite preferred.\n- Experience with CAD (SolidWorks) required.\n\nArthrex Benefits are:\n- Medical Insurance (if 25 or more hours per week), including access to telehealth services\n- Employee Assistance Program (EAP)\n- Free Onsite Medical Clinics\n- Free Onsite Lunch\n- Volunteer PTO (8 hours)\n- Access to the Wellness Center (For South West Florida positions only)\n\nAll qualified applicants will receive consideration for employment without regard to race, color, religion, age, sex, sexual orientation, gender identity, national origin, disability, protected veteran status, or any other status protected by law.\n"
+  },
+  "initial_analysis": {
+    "method": "Fictional demonstration; no eligibility decision",
+    "overall_status": "Requires review",
+    "mappings": [
+      {
+        "requirement": "REQ1",
+        "status": "clarification_required",
+        "evidence_ids": [],
+        "explanation": "Fictional demo: confirm this requirement against real evidence before applying."
+      },
+      {
+        "requirement": "REQ2",
+        "status": "clarification_required",
+        "evidence_ids": [],
+        "explanation": "Fictional demo: confirm this requirement against real evidence before applying."
+      },
+      {
+        "requirement": "REQ3",
+        "status": "clarification_required",
+        "evidence_ids": [],
+        "explanation": "Fictional demo: confirm this requirement against real evidence before applying."
+      },
+      {
+        "requirement": "REQ4",
+        "status": "clarification_required",
+        "evidence_ids": [],
+        "explanation": "Fictional demo: confirm this requirement against real evidence before applying."
+      },
+      {
+        "requirement": "REQ5",
+        "status": "clarification_required",
+        "evidence_ids": [],
+        "explanation": "Fictional demo: confirm this requirement against real evidence before applying."
+      },
+      {
+        "requirement": "REQ6",
+        "status": "clarification_required",
+        "evidence_ids": [],
+        "explanation": "Fictional demo: confirm this requirement against real evidence before applying."
+      }
+    ],
+    "suggested_resume_emphasis": [],
+    "unsupported_claims_to_avoid": [
+      "Confirmed eligibility"
+    ]
+  },
+  "next_build": {
+    "status": "Public demo of local dashboard; optional local AI",
+    "paid_calls_authorized": false
+  }
+}

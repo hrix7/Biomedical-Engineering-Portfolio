@@ -1,0 +1,3 @@
+projects/embedded-c-build-system/** linguist-vendored
+projects/embedded-c-build-system/src/Makefile linguist-vendored=false
+projects/embedded-c-build-system/src/sources.mk linguist-vendored=false

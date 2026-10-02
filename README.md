@@ -13,6 +13,13 @@ I am a biomedical engineer working across medical imaging, patient-specific desi
 
 The repository links are maintained in [projects.yaml](projects.yaml).
 
+
+## Recent projects — October 2026
+
+- **[AI Job Search Crew](https://github.com/hrix7/Biomedical-Engineering-Portfolio/tree/main/projects/ai-job-search-crew)** — AI & Automation. Local dashboard, evidence matching, reviewed drafts, and tracking; optional local CrewAI/Ollama.
+- **[Embedded C Build System](https://github.com/hrix7/Biomedical-Engineering-Portfolio/tree/main/projects/embedded-c-build-system)** — Embedded Systems. Completed GCC/GNU Make build files for HOST and MSP432; original course sources credited.
+- **[Application Desk](https://github.com/hrix7/Biomedical-Engineering-Portfolio/tree/main/projects/application-desk)** — App Development. Browser-based application tracker, Part 1; MCP integration pending.
+
 ## Professional work
 
 ### Operations Engineer - Steroviz Pixels Pvt. Ltd. | Dec 2022-May 2024

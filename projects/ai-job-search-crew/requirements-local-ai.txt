@@ -1,0 +1,3 @@
+# Optional. The dashboard itself uses only Python's standard library.
+# Version tested with a simulated model transport, September 2026.
+crewai==1.15.23
