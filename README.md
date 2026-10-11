@@ -4,7 +4,7 @@
 
 I am a biomedical engineer who works across computational models, medical images, and physical devices. This portfolio brings together my academic projects, professional contributions, and software development work.
 
-[Featured projects](#featured-projects) · [Explore by field](#explore-by-field) · [Software projects](#software-projects) · [Experience](#experience) · [LinkedIn](https://www.linkedin.com/in/hritika-adhikary-58179a1b6/)
+[Featured projects](#featured-projects) · [Explore by field](#explore-by-field) · [Software projects](#software-projects) · [Experience](#experience) · [Certifications](#certifications) · [LinkedIn](https://www.linkedin.com/in/hritika-adhikary-58179a1b6/)
 
 ## Featured projects
 
@@ -80,12 +80,12 @@ The portfolio includes a [CSV summary utility](scripts/ergonomic_risk_summary.py
 
 ## Software projects
 
-These projects are stored directly in this repository.
+Project implementations and their dedicated repositories are linked below.
 
 | Project | Implemented work | Current status | Review |
 | :--- | :--- | :--- | :--- |
 | [AI Job Search Crew](projects/ai-job-search-crew) | Local Python dashboard, SQLite storage, evidence matching, editable drafts, review history and application tracking | Ongoing; optional local-model testing remains pending | [Source](projects/ai-job-search-crew/app.py) · [Testing record](projects/ai-job-search-crew/TESTING.md) |
-| [Embedded C Build System](projects/embedded-c-build-system) | HOST/MSP432 selection, dependency generation, preprocessing, assembly, compilation and linking targets | Module 2 build files completed; physical MCU execution not verified | [Makefile](projects/embedded-c-build-system/src/Makefile) · [Verification record](projects/embedded-c-build-system/VERIFICATION.txt) |
+| [Embedded C Build & Memory System](https://github.com/hrix7/Embedded-Systems-Coursework) | HOST/MSP432 builds, dependency tracking, pointer-based memory operations, integer conversions and statistics | HOST tests passed; hardware execution pending | [Source](https://github.com/hrix7/Embedded-Systems-Coursework/tree/main/course1/src) · [Verification](https://github.com/hrix7/Embedded-Systems-Coursework/blob/main/course1/VERIFICATION.md) |
 | [Application Desk](projects/application-desk) | Browser tracker with application records, statuses, deadlines, notes, search/filter and CSV export | Part 1 implemented; user verification and later MCP integration pending. This repository contains the overview and app link | [Project and app link](projects/application-desk/README.md) |
 
 AI Job Search Crew uses fictional public demo data and requires human review; it does not submit applications. Software project READMEs identify AI implementation assistance. Embedded C files retain original course attribution and notices.
@@ -109,7 +109,7 @@ python3 app.py
 
 The default workflow requires Python 3.10+ and uses the standard library. Optional local AI setup is documented in the [project README](projects/ai-job-search-crew/README.md).
 
-For the embedded build project, follow its [setup instructions](projects/embedded-c-build-system/README.md) to obtain the course sources and install the appropriate toolchain.
+For the embedded project, see the dedicated [repository and build instructions](https://github.com/hrix7/Embedded-Systems-Coursework).
 
 ## Experience
 
@@ -129,6 +129,12 @@ For the embedded build project, follow its [setup instructions](projects/embedde
 | Medical imaging & AI | PyTorch, U-Net, ResNet, UPerNet, Faster R-CNN, Vision Transformers, 3D Slicer, ImageJ, DICOM, SLURM |
 | Design & fabrication | SolidWorks, Fusion 360, PTC Creo, Meshmixer, Blender, PreForm, SLA 3D printing, Figma |
 | Devices & analysis | FDA pathway analysis, SaMD, EU IVDR, FMEA, physiological signals, RULA/REBA |
+
+## Certifications
+
+| Certification | Provider | Project | Credential |
+| :--- | :--- | :--- | :--- |
+| Introduction to Embedded Systems Software and Development Environments | University of Colorado Boulder · Coursera | [Embedded C Build & Memory System](https://github.com/hrix7/Embedded-Systems-Coursework) | Certificate verification pending |
 
 ## Education
 
