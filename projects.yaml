@@ -41,3 +41,6 @@ projects:
   - name: Application Desk
     url: https://github.com/hrix7/Biomedical-Engineering-Portfolio/tree/main/projects/application-desk
     themes: [application-desk]
+  - name: ACW Accountability Lab
+    url: https://github.com/hrix7/ACW-Accountability-Lab
+    themes: [AI-governance, cyber-accountability, human-control, evidence-tracking]
