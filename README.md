@@ -53,19 +53,6 @@ These results describe separate experiments, not a single combined benchmark.
 
 [Explore the project](https://github.com/hrix7/Patient-Specific-Medical-Design) · [Workflow](https://github.com/hrix7/Patient-Specific-Medical-Design/blob/main/docs/WORKFLOW.md) · [Geometry tools](https://github.com/hrix7/Patient-Specific-Medical-Design/tree/main/src)
 
-### 04 · ACW Accountability Lab
-**Hritika Adhikary · Independent research software project**
-
-**The problem:** Make assessments of autonomous cyber systems transparent by connecting risk and human-control judgments to their supporting evidence.
-
-**Project work:** A Python assessment engine with six risk dimensions, five human-control dimensions, configurable weights, evidence references and rationales. Missing evidence remains unknown and produces a score interval. Component-floor checks and weight sensitivity analysis help expose weaknesses that an average could hide.
-
-**Outputs:** Reproducible HTML and JSON reports, structured case records, a rating guide and automated tests.
-
-**Status:** Working research prototype. Current examples are synthetic; source-backed cases, independent ratings and research validation remain in development. Scores are not validated risk predictions or safety certifications.
-
-[Explore the project](https://github.com/hrix7/ACW-Accountability-Lab) · [Methodology](https://github.com/hrix7/ACW-Accountability-Lab/blob/main/docs/METHODOLOGY.md) · [Roadmap](https://github.com/hrix7/ACW-Accountability-Lab/blob/main/docs/ROADMAP.md)
-
 ## Explore by field
 
 | Field | Project | What I worked on |
@@ -98,7 +85,6 @@ Project implementations and their dedicated repositories are linked below.
 
 | Project | Implemented work | Current status | Review |
 | :--- | :--- | :--- | :--- |
-| [ACW Accountability Lab](https://github.com/hrix7/ACW-Accountability-Lab) | Python CLI, evidence-linked assessments, uncertainty intervals, sensitivity analysis and HTML/JSON exports | Working prototype; synthetic examples, research validation ongoing | [Source](https://github.com/hrix7/ACW-Accountability-Lab/blob/main/project.py) · [Tests](https://github.com/hrix7/ACW-Accountability-Lab/tree/main/tests) |
 | [AI Job Search Crew](projects/ai-job-search-crew) | Local Python dashboard, SQLite storage, evidence matching, editable drafts, review history and application tracking | Ongoing; optional local-model testing remains pending | [Source](projects/ai-job-search-crew/app.py) · [Testing record](projects/ai-job-search-crew/TESTING.md) |
 | [Embedded C Build & Memory System](https://github.com/hrix7/Embedded-Systems-Coursework) | HOST/MSP432 builds, dependency tracking, pointer-based memory operations, integer conversions and statistics | HOST tests passed; hardware execution pending | [Source](https://github.com/hrix7/Embedded-Systems-Coursework/tree/main/course1/src) · [Verification](https://github.com/hrix7/Embedded-Systems-Coursework/blob/main/course1/VERIFICATION.md) |
 | [Application Desk](projects/application-desk) | Browser tracker with application records, statuses, deadlines, notes, search/filter and CSV export | Part 1 implemented; user verification and later MCP integration pending. This repository contains the overview and app link | [Project and app link](projects/application-desk/README.md) |
