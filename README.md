@@ -57,14 +57,10 @@ These results describe separate experiments, not a single combined benchmark.
 
 | Field | Project | What I worked on |
 | :--- | :--- | :--- |
-| Medical imaging & AI | [Medical Imaging Deep Learning](https://github.com/hrix7/Medical-Imaging-Deep-Learning) | Classification, segmentation, lesion localization, GPU training |
-| Biomedical AI | [CardioAI Continuous Benchmark](https://github.com/hrix7/CardioAI-Continuous-Benchmark) | Synthetic rhythm classification, subject-disjoint evaluation and distribution-shift benchmarking |
-| Biomechanics | [3D Pressure Sore Tissue Model](https://github.com/hrix7/3D-Pressure-Sore-Tissue-Model) | Multilayer CAD, geometry comparisons, 15 FEA cases |
-| Computational modeling | [Biomedical Digital Twin](https://github.com/hrix7/Biomedical-Digital-Twin) | Synthetic Windkessel circulation model, parameter estimation and forward forecasting |
+| Medical imaging & biomedical AI | [Medical Imaging Deep Learning](https://github.com/hrix7/Medical-Imaging-Deep-Learning) · [CardioAI Continuous Benchmark](https://github.com/hrix7/CardioAI-Continuous-Benchmark) · PyTorch, U-Net, ResNet, UPerNet, Faster R-CNN, Vision Transformers, 3D Slicer, ImageJ, DICOM, SLURM | Image classification, segmentation and localization; synthetic cardiac-rhythm benchmarking |
+| Biomechanics & computational modeling | [3D Pressure Sore Tissue Model](https://github.com/hrix7/3D-Pressure-Sore-Tissue-Model) · [Biomedical Digital Twin](https://github.com/hrix7/Biomedical-Digital-Twin) | Tissue FEA and synthetic cardiovascular modeling |
 | Human factors & ergonomics | [Tea-leaf picker ergonomic assessment](#ergonomic-assessment) | RULA, REBA, NIOSH lifting-index assessment and proposed interventions |
-| Signals & wearables | [Wearable Gait and Fall-Risk System](https://github.com/hrix7/Wearable-Gait-Fall-Risk-System) | Multimodal IMU/FSR/PPG system design, gait metrics and dashboard concepts |
-| Signals & wearables | [AutoEEG Research Lab](https://github.com/hrix7/AutoEEG-Research-Lab) | Synthetic EEG spectral recovery and artifact rejection |
-| Signals & wearables | [Biomedical Signal Processing](https://github.com/hrix7/Biomedical-Signal-Processing) | Physiological signal analysis |
+| Signals & wearables | [Wearable Gait and Fall-Risk System](https://github.com/hrix7/Wearable-Gait-Fall-Risk-System) · [AutoEEG Research Lab](https://github.com/hrix7/AutoEEG-Research-Lab) · [Biomedical Signal Processing](https://github.com/hrix7/Biomedical-Signal-Processing) | Wearable sensing, gait and physiological signals; synthetic EEG spectral analysis and artifact rejection |
 | CAD & clinical design | [Patient-Specific Medical Design](https://github.com/hrix7/Patient-Specific-Medical-Design) | Anatomical reconstruction, implants, mesh preparation |
 | Graphics & visualization | [Computer Graphics and 3D Visualization](https://github.com/hrix7/Computer-Graphics-and-3D-Visualization) | Stanford Summer Session; final rendered scene |
 | Devices & translation | [Medical Device Regulatory Analysis](https://github.com/hrix7/Medical-Device-Regulatory-Analysis) | Medical-device pathways and regulatory analysis |
@@ -130,7 +126,6 @@ For the embedded project, see the dedicated [repository and build instructions](
 | Area | Tools and methods |
 | :--- | :--- |
 | Code & data | Python, MATLAB, NumPy, pandas, OpenCV, Matplotlib, C, GNU Make |
-| Medical imaging & AI | PyTorch, U-Net, ResNet, UPerNet, Faster R-CNN, Vision Transformers, 3D Slicer, ImageJ, DICOM, SLURM |
 | Design & fabrication | SolidWorks, Fusion 360, PTC Creo, Meshmixer, Blender, PreForm, SLA 3D printing, Figma |
 | Devices & analysis | FDA pathway analysis, SaMD, EU IVDR, FMEA, physiological signals, RULA/REBA |
 
